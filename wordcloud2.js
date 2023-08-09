@@ -1242,30 +1242,41 @@ if (!window.clearImmediate) {
 
 // my code
 // ------------------------
+
 const pronouns = [
 'she', 'her', 
 'they', 'them', 
 'he', 'him',
 ]
 
+
+
 const list = []
 
 // let windowsize = document.documentElement.clientWidth + document.documentElement.clientHeight
-let windowsize = 100
-console.log(windowsize)
+let windowsize = 1500
 
 for (let i = 0; i < windowsize; i++) {
-  list.push([eval('pronouns[Math.floor(Math.random() * pronouns.length)]'), 50])
-  console.log(list)
+  let x = Math.floor(Math.random() * 75)
+  list.push([eval('pronouns[Math.floor(Math.random() * pronouns.length)]'), x])
 }
 
 window.onload = WordCloud(document.getElementById('my_canvas'), 
 { list: list,
-  color: "",
+  color: '#131212',
   fontWeight: 'bold',
-  shuffle: 'true', 
   rotateRatio: '1',
-  drawOutOfBound: 'false',
-  shape: 'square',
-  gridSize: '30',
+  gridSize: '15',
+  backgroundColor: 'black'
+});
+
+window.addEventListener('resize', function(event){
+  WordCloud(document.getElementById('my_canvas'), 
+{ list: list,
+  color:'',
+  fontWeight: 'bold',
+  rotateRatio: '1',
+  gridSize: '15',
+  backgroundColor: 'black'
+});
 });
