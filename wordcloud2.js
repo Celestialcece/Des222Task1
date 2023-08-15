@@ -1249,8 +1249,6 @@ const pronouns = [
 'he', 'him',
 ]
 
-
-
 const list = []
 
 // let windowsize = document.documentElement.clientWidth + document.documentElement.clientHeight
@@ -1263,7 +1261,7 @@ for (let i = 0; i < windowsize; i++) {
 
 window.onload = WordCloud(document.getElementById('my_canvas'), 
 { list: list,
-  color: '#131212',
+  color: '#363636',
   fontWeight: 'bold',
   rotateRatio: '1',
   gridSize: '15',
@@ -1273,10 +1271,9 @@ window.onload = WordCloud(document.getElementById('my_canvas'),
 window.addEventListener('resize', function(event){
   WordCloud(document.getElementById('my_canvas'), 
 { list: list,
-  color:'',
+  color:'#363636',
   fontWeight: 'bold',
   rotateRatio: '1',
   gridSize: '15',
   backgroundColor: 'black'
-});
-});
+})});
