@@ -1252,7 +1252,7 @@ const pronouns = [
 const list = []
 
 // let windowsize = document.documentElement.clientWidth + document.documentElement.clientHeight
-let windowsize = 1500
+let windowsize = 10000
 
 for (let i = 0; i < windowsize; i++) {
   let x = Math.floor(Math.random() * 75)
@@ -1262,7 +1262,7 @@ for (let i = 0; i < windowsize; i++) {
 window.onload = WordCloud(document.getElementById('my_canvas'), 
 { list: list,
   color: '#363636',
-  fontWeight: 'bold',
+  fontweight: 'bold',
   rotateRatio: '1',
   gridSize: '15',
   backgroundColor: 'black'
@@ -1272,7 +1272,7 @@ window.addEventListener('resize', function(event){
   WordCloud(document.getElementById('my_canvas'), 
 { list: list,
   color:'#363636',
-  fontWeight: 'bold',
+  fontweight: 'bold',
   rotateRatio: '1',
   gridSize: '15',
   backgroundColor: 'black'
