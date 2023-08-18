@@ -37,7 +37,9 @@
   .content{
     margin: 0 auto;
     font-family: Inter;
-    backdrop-filter: blur(0px);
+    /* backdrop-filter: blur(0px); */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 
   .quote-content{
@@ -149,10 +151,10 @@
     "dy3 bod bod bod bod bod bod dy5" minmax(4em, auto)
     "qu1 bod bod bod bod bod bod qu2" minmax(5em, 21em)
     "qu1 bod bod bod bod bod bod dy6" minmax(12em, auto)
-    " .  bod bod bod bod bod bod  . " minmax(6em, auto)
-
-
-
+    " .  bod bod bod bod bod bod  . " minmax(6em, auto);
+  .content{
+    background-color: rgba(0, 0, 0, 1);
+  }
 }
 
 @media (min-width: 50em){
@@ -180,15 +182,15 @@
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
      " .   .  ban ban ban ban ban ban ban ban ban ban ban ban ban  . " minmax(8em, auto)
      " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
-     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, 0em)
-     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, 0em)
+     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
+     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, 2em)
      " .   .   .   .   .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(2em, 2em)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod  .   .   .   .   . " minmax(4em, auto)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(2em, auto)
      " .  dy3 dy3  .   .  bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(4em, auto)
      " .  qu1 qu1 qu1 qu1 bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(8em, auto)
      " .  qu1 qu1 qu1 qu1 bod bod bod bod bod bod qu2 qu2 qu2 qu2  . " minmax(1em, auto)
-     " .  qu1 qu1 qu1 qu1 bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(12em, auto)
+     " .  qu1 qu1 qu1 qu1 bod bod bod bod bod bod  .  dy6 dy6 dy6  . " minmax(12em, auto)
      " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
     }
 }
