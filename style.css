@@ -72,17 +72,18 @@
 
 }
 
+.body-container {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
 
+
+}
 
 .body {
-  display: flex;
-
-  align-items: flex-start;
-  padding: 46px 0px;
-  gap: 10px;
-
-  flex: 1 0 0;
-  /* align-self: stretch; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
 }
 
@@ -93,7 +94,7 @@
     grid-area: ban;
 }
 
-#body {
+#body-container {
     grid-area: bod;
 }
 
@@ -145,7 +146,7 @@
     "dy2 bod bod bod bod bod bod  . " minmax(4em, auto)
     "dy2 bod bod bod bod bod bod dy5" minmax(1em, auto)
     " .  bod bod bod bod bod bod dy5" minmax(4em, auto)
-    " .  bod bod bod bod bod bod dy5" minmax(4em, auto)
+    "dy3 bod bod bod bod bod bod dy5" minmax(4em, auto)
     "qu1 bod bod bod bod bod bod qu2" minmax(5em, 21em)
     "qu1 bod bod bod bod bod bod dy6" minmax(12em, auto)
     " .  bod bod bod bod bod bod  . " minmax(6em, auto)
