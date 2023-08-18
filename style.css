@@ -75,10 +75,15 @@
 
 
 .body {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
+  display: flex;
+
+  align-items: flex-start;
+  padding: 46px 0px;
+  gap: 10px;
+
+  flex: 1 0 0;
+  /* align-self: stretch; */
+
 }
 
 .quote-content {
@@ -131,20 +136,19 @@
   
 .content {
     grid-template:
-    "ban ban ban ban" minmax(6em, auto)
-    " .   .   .   . " minmax(2em, auto)
-    "tm1 tm1 tm1 tm1" minmax(30em, auto)
-    " .   .   .   . " minmax(2em, auto)
-    "tm2 tm2 tm2 tm2" minmax(30em, auto)
-    " .   .   .   . " minmax(2em, auto)
-    "tm3 tm3 tm3 tm3" minmax(30em, auto)
-    " .   .   .   . " minmax(4em, auto)
-    "oct oct oct oct" minmax(6em, auto)
-    " .   .   .   . " minmax(2em, auto)
-    "ci1 ci1 ci2 ci2"minmax(8em, auto)
-    "ci3 ci3 ci4 ci4" minmax(8em, auto)
-    "ci5 ci5 ci6 ci6" minmax(8em, auto)
-    "ci7 ci7 ci8 ci8" minmax(8em, auto)
+    " .   .   .   .   .   .   .   . " minmax(2em, auto)
+    "ban ban ban ban ban ban ban ban" minmax(8em, auto)
+    " .  bod bod bod bod bod bod  . " minmax(6em, auto)
+    "dy1 bod bod bod bod bod bod  . " minmax(6em, 0em)
+    "dy1 bod bod bod bod bod bod dy4" minmax(8em, 0em)
+    " .  bod bod bod bod bod bod dy4" minmax(2em, 2em)
+    "dy2 bod bod bod bod bod bod  . " minmax(4em, auto)
+    "dy2 bod bod bod bod bod bod dy5" minmax(1em, auto)
+    " .  bod bod bod bod bod bod dy5" minmax(4em, auto)
+    " .  bod bod bod bod bod bod dy5" minmax(4em, auto)
+    "qu1 bod bod bod bod bod bod qu2" minmax(5em, 21em)
+    "qu1 bod bod bod bod bod bod dy6" minmax(12em, auto)
+    " .  bod bod bod bod bod bod  . " minmax(6em, auto)
 
 
 
@@ -152,19 +156,20 @@
 
 @media (min-width: 50em){
     .content {
-            grid-template:
-            "ban ban ban ban ban ban ban ban" minmax(8em, auto)
-            " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "tm1 tm1 tm1 tm1 tm3 tm3 tm3 tm3" minmax(30em, auto)
-            " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            " .   .  tm2 tm2 tm2 tm2  .   . " minmax(30em, auto)
-            " .   .   .   .   .   .   .   . " minmax(4em, auto)
-            "oct oct oct oct oct oct oct oct" minmax(6em, auto)
-            " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(14em, auto)
-            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(14em, auto)
-            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(14em, auto)
-            "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+        grid-template:
+      " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+      "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
+      " .   .   .  bod bod bod bod bod bod  .   .   . " minmax(6em, auto)
+      "dy1 dy1  .  bod bod bod bod bod bod  .   .   . " minmax(6em, 0em)
+      "dy1 dy1  .  bod bod bod bod bod bod dy4 dy4 dy4" minmax(8em, 0em)
+      " .   .   .  bod bod bod bod bod bod dy4 dy4 dy4" minmax(2em, 2em)
+      "dy2 dy2 dy2 bod bod bod bod bod bod  .   .   . " minmax(4em, auto)
+      "dy2 dy2 dy2 bod bod bod bod bod bod dy5 dy5 dy5" minmax(1em, auto)
+      " .   .   .  bod bod bod bod bod bod dy5 dy5 dy5" minmax(4em, auto)
+      "dy3 dy3  .  bod bod bod bod bod bod dy5 dy5 dy5" minmax(4em, auto)
+      "qu1 qu1 qu1 bod bod bod bod bod bod qu2 qu2 qu2" minmax(5em, 21em)
+      "qu1 qu1 qu1 bod bod bod bod bod bod dy6 dy6 dy6" minmax(12em, auto)
+      " .   .   .  bod bod bod bod bod bod  .   .   . " minmax(6em, auto)
     }
 }
 
@@ -174,9 +179,9 @@
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
      " .   .  ban ban ban ban ban ban ban ban ban ban ban ban ban  . " minmax(8em, auto)
      " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
-     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
-     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, auto)
-     " .   .   .   .   .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(2em, auto)
+     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, 0em)
+     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, 0em)
+     " .   .   .   .   .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(2em, 2em)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod  .   .   .   .   . " minmax(4em, auto)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(2em, auto)
      " .  dy3 dy3  .   .  bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(4em, auto)
