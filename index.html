@@ -4,13 +4,19 @@
     <title>Responding to the world</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Div for word cloud -->
     <div class="container">
         <div class="box" id="my_canvas"></div>
         <div class="box overlay"></div>
     </div>
+    <!-- Div for blur effect -->
     <div class = "blur"></div>
+    <!-- Dys content -->
     <div class = "content">
         <div class="banner" id="banner">
           <div class="title" style="text-align: center;">Dysphoria</div>
@@ -38,7 +44,11 @@
           </div>
         </div>
         <div class="body-container" id="body-container">
-          <div class="body" id="body"><img class="body" src="./Images/Body.png"></img></div>
+          <div class="body" id="body">
+            <a href="./index2.html">
+              <img class="body" src="./Images/Body.png"></img>
+            </a> 
+          </div>
         </div>
         <div class="Dys-container1" id="Dys1"><img class="Dys-image" src=".\Images\Dys1.png"></img></div>
         <div class="Dys-container2" id="Dys2"><img class="Dys-image" src=".\Images\Dys2.jpg"></img></div>
@@ -47,8 +57,7 @@
         <div class="Dys-container5" id="Dys5"><img class="Dys-image" src=".\Images\Dys5.jpg"></img></div>
         <div class="Dys-container6" id="Dys6"><img class="Dys-image" src=".\Images\Dys6.jpg"></img></div>
     </div>
-    
 </body>
-<script src="main.js"></script>
-<script src="wordcloud2.js"></script>
+<script src="./main.js"></script>
+<script src="./wordcloud2.js"></script>
 </html>

@@ -8,14 +8,14 @@
     left:0;
     width: 100%;
     height: 100%;
-    
   }
 
   .blur {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     position: fixed;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 
   }
   
@@ -37,13 +37,23 @@
   .content{
     margin: 0 auto;
     font-family: Inter;
+    width:100%;
+    z-index:-100;
+    top:0;
+
     /* backdrop-filter: blur(0px); */
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
   }
 
   .quote-content{
     color: white;
+    text-shadow:
+    3px 3px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
     margin: 0 auto;
     font-family: Inter;
     box-shadow: 0px 0px 50px 20px rgba(39, 39, 39, 0.65);
@@ -59,6 +69,12 @@
 
 .title {
   color: white;
+  text-shadow:
+  3px 3px 0 #000,
+-1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+  1px 1px 0 #000;
   font-size: 4em;
   font-weight: 400;
 }
@@ -78,8 +94,6 @@
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
-
-
 }
 
 .body {
@@ -89,9 +103,6 @@
 
 }
 
-.quote-content {
-  backdrop-filter: blur(2px);
-}
 #banner {
     grid-area: ban;
 }
@@ -135,26 +146,23 @@
 .content {
     display: grid;
     column-gap: 1em;
+    z-index:-100;
+
 }
   
 .content {
     grid-template:
-    " .   .   .   .   .   .   .   . " minmax(2em, auto)
-    "ban ban ban ban ban ban ban ban" minmax(8em, auto)
-    " .  bod bod bod bod bod bod  . " minmax(6em, auto)
-    "dy1 bod bod bod bod bod bod  . " minmax(6em, 0em)
-    "dy1 bod bod bod bod bod bod dy4" minmax(8em, 0em)
-    " .  bod bod bod bod bod bod dy4" minmax(2em, 2em)
-    "dy2 bod bod bod bod bod bod  . " minmax(4em, auto)
-    "dy2 bod bod bod bod bod bod dy5" minmax(1em, auto)
-    " .  bod bod bod bod bod bod dy5" minmax(4em, auto)
-    "dy3 bod bod bod bod bod bod dy5" minmax(4em, auto)
-    "qu1 bod bod bod bod bod bod qu2" minmax(5em, 21em)
-    "qu1 bod bod bod bod bod bod dy6" minmax(12em, auto)
-    " .  bod bod bod bod bod bod  . " minmax(6em, auto);
-  .content{
-    background-color: rgba(0, 0, 0, 1);
-  }
+    " .  ban ban ban ban ban ban  . " minmax(4em, auto)
+    "dy1 dy1 bod bod bod bod dy4 dy4" minmax(4em, auto)
+    " .   .  bod bod bod bod dy4 dy4" minmax(2em, auto)
+    "dy2 dy2 bod bod bod bod dy5 dy5" minmax(2em, auto)
+    " .   .  bod bod bod bod dy5 dy5" minmax(2em, auto)
+    "dy3 dy3 bod bod bod bod dy5 dy5" minmax(4em, auto)
+    " .   .  bod bod bod bod  .   . " minmax(4em, auto)
+    "qu2 qu2 bod bod bod bod qu1 qu1" minmax(2em, auto)
+    "qu2 qu2 bod bod bod bod  .   . " minmax(2em, auto)
+    "qu2 qu2 bod bod bod bod dy6 dy6" minmax(2em, auto)
+    " .   .  bod bod bod bod dy6 dy6" minmax(2em, auto)
 }
 
 @media (min-width: 50em){
@@ -163,14 +171,14 @@
       " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
       "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
       " .   .   .  bod bod bod bod bod bod  .   .   . " minmax(6em, auto)
-      "dy1 dy1  .  bod bod bod bod bod bod  .   .   . " minmax(6em, 0em)
-      "dy1 dy1  .  bod bod bod bod bod bod dy4 dy4 dy4" minmax(8em, 0em)
+      "dy1 dy1  .  bod bod bod bod bod bod  .   .   . " minmax(6em, auto)
+      "dy1 dy1  .  bod bod bod bod bod bod dy4 dy4 dy4" minmax(8em, auto)
       " .   .   .  bod bod bod bod bod bod dy4 dy4 dy4" minmax(2em, 2em)
       "dy2 dy2 dy2 bod bod bod bod bod bod  .   .   . " minmax(4em, auto)
       "dy2 dy2 dy2 bod bod bod bod bod bod dy5 dy5 dy5" minmax(1em, auto)
       " .   .   .  bod bod bod bod bod bod dy5 dy5 dy5" minmax(4em, auto)
       "dy3 dy3  .  bod bod bod bod bod bod dy5 dy5 dy5" minmax(4em, auto)
-      "qu1 qu1 qu1 bod bod bod bod bod bod qu2 qu2 qu2" minmax(5em, 21em)
+      "qu1 qu1 qu1 bod bod bod bod bod bod qu2 qu2 qu2" minmax(5em, auto)
       "qu1 qu1 qu1 bod bod bod bod bod bod dy6 dy6 dy6" minmax(12em, auto)
       " .   .   .  bod bod bod bod bod bod  .   .   . " minmax(6em, auto)
     }
@@ -183,8 +191,8 @@
      " .   .  ban ban ban ban ban ban ban ban ban ban ban ban ban  . " minmax(8em, auto)
      " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
      " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
-     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, 2em)
-     " .   .   .   .   .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(2em, 2em)
+     " .  dy1 dy1 dy1  .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(8em, auto)
+     " .   .   .   .   .  bod bod bod bod bod bod  .  dy4 dy4  .   . " minmax(2em, auto)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod  .   .   .   .   . " minmax(4em, auto)
      " .   .  dy2 dy2 dy2 bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(2em, auto)
      " .  dy3 dy3  .   .  bod bod bod bod bod bod dy5 dy5 dy5 dy5 dy5" minmax(4em, auto)
@@ -193,4 +201,214 @@
      " .  qu1 qu1 qu1 qu1 bod bod bod bod bod bod  .  dy6 dy6 dy6  . " minmax(12em, auto)
      " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
     }
+}
+
+
+/* Eup Content? */
+.eup-container {
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.eup-blur {
+  width: 150%;
+  height: 150%;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+}
+
+.eup-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.eup-overlay {
+  color: black;
+  font-size: 10em;
+  width: 100%;
+  height: 100%;
+}
+
+.eup-content{
+  margin: 0 auto;
+  font-family: Inter;
+  /* backdrop-filter: blur(0px); */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.eup-quote-content{
+  color: white;
+  text-shadow:
+  3px 3px 0 #000,
+-1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+  1px 1px 0 #000;
+
+  margin: 0 auto;
+  font-family: Inter;
+  background-color: rgba(39, 39, 39, 0.47);
+  box-shadow: 0px 0px 50px 20px rgba(39, 39, 39, 0.65);
+  /* box-shadow: 0px 0px 50px 20px rgba(211, 211, 211, 0.65);
+  background-color: rgba(211, 211, 211, 0.47); */
+}
+
+.eup-banner {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  gap: 0.65px;
+}
+
+.eup-title {
+color: white;
+text-shadow:
+3px 3px 0 #000,
+-1px -1px 0 #000,  
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+font-size: 4em;
+font-weight: 400;
+}
+
+.Eup-image {
+animation: 1s ease-out 0s 1 slideInMiddle;
+width: 100%;
+flex-shrink: 0;
+object-fit: cover;
+background-color: rgba(39, 39, 39, 0.47);
+box-shadow: 0px 0px 50px 20px rgba(39, 39, 39, 0.65);
+/* background-color: rgba(211, 211, 211, 0.47);
+box-shadow: 0px 0px 50px 20px rgba(211, 211, 211, 0.65); */
+}
+
+.eup-body-container {
+display: flex;
+align-items: flex-start;
+flex-shrink: 0;
+}
+
+.eup-body {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+#eup-banner {
+  grid-area: ban;
+}
+
+#eup-body-container {
+  grid-area: bod;
+}
+
+#eup-quote-1 {
+  grid-area: qu1;
+}
+
+#eup-quote-2 {
+grid-area: qu2;
+}
+
+#Eup1 {
+  grid-area: dy1;
+}
+
+#Eup2 {
+  grid-area: dy2;
+}
+
+#Eup3 {
+  grid-area: dy3;
+}
+
+#Eup4 {
+  grid-area: dy4;
+}
+
+#Eup5 {
+  grid-area: dy5;
+}
+
+#Eup6 {
+  grid-area: dy6;
+}
+
+.eup-content {
+  display: grid;
+  column-gap: 1em;
+}
+
+.eup-content {
+  grid-template:
+  " .  ban ban ban ban ban ban  . " minmax(4em, auto)
+  "dy1 dy1 bod bod bod bod  .   . " minmax(2em, auto)
+  "dy1 dy1 bod bod bod bod dy5 dy5" minmax(4em, auto)
+  " .   .  bod bod bod bod dy5 dy5" minmax(2em, auto)
+  "qu2 qu2 bod bod bod bod dy5 dy5" minmax(2em, auto)
+  "qu2 qu2 bod bod bod bod  .   . " minmax(2em, auto)
+  "qu2 qu2 bod bod bod bod dy6 dy6" minmax(4em, auto)
+  " .  dy2 bod bod bod bod qu1 qu1" minmax(2em, auto)
+  "dy3  .  bod bod bod bod qu1 qu1" minmax(2em, auto)
+  " .  dy4 bod bod bod bod qu1 qu1" minmax(2em, auto)
+  " .   .  bod bod bod bod qu1 qu1" minmax(2em, auto)
+}
+
+@media (min-width: 50em){
+  .eup-content {
+      grid-template:
+      " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+      " .  ban ban ban ban ban ban ban ban ban ban  . " minmax(4em, auto)
+      " .   .   .   .  bod bod bod bod dy5 dy5 dy5  . " minmax(2em, auto)
+      "dy1 dy1 dy1  .  bod bod bod bod dy5 dy5 dy5  . " minmax(12em, auto)
+      " .   .   .   .  bod bod bod bod dy5 dy5 dy5  . " minmax(2em, auto)
+      "qu2 qu2 qu2  .  bod bod bod bod dy5 dy5 dy5  . " minmax(2em, auto)
+      "qu2 qu2 qu2  .  bod bod bod bod  .   .   .   . " minmax(2em, auto)
+      " .   .   .   .  bod bod bod bod dy6 dy6 dy6  . " minmax(2em, auto)
+      " .   .  dy2 dy2 bod bod bod bod dy6 dy6 dy6  . " minmax(4em, auto)
+      "dy3 dy3 dy2 dy2 bod bod bod bod dy6 dy6 dy6  . " minmax(4em, auto)
+      "dy3 dy3  .   .  bod bod bod bod dy6 dy6 dy6  . " minmax(2em, auto)
+      "dy3 dy3 dy4 dy4 bod bod bod bod  .   .   .   . " minmax(2em, auto)
+      "dy3 dy3 dy4 dy4 bod bod bod bod  .  qu1 qu1 qu1" minmax(2em, auto)
+      " .   .  dy4 dy4 bod bod bod bod  .  qu1 qu1 qu1" minmax(6em, auto)
+      " .   .  dy4 dy4 bod bod bod bod  .   .   .   . " minmax(2em, auto)
+      " .   .   .   .  bod bod bod bod  .   .   .   . " minmax(6em, auto)
+  }
+}
+
+@media (min-width: 75em){
+  .eup-content {
+      grid-template:
+   " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+   " .   .  ban ban ban ban ban ban ban ban ban ban ban ban  .   . " minmax(8em, auto)
+   " .   .   .   .   .  bod bod bod bod bod bod dy5 dy5 dy5 dy5  . " minmax(6em, auto)
+   " .  dy1 dy1 dy1 dy1 bod bod bod bod bod bod dy5 dy5 dy5 dy5  . " minmax(16em, auto)
+   " .   .   .   .   .  bod bod bod bod bod bod dy5 dy5 dy5 dy5  . " minmax(2em, auto)
+   "qu2 qu2 qu2 qu2 qu2 bod bod bod bod bod bod dy5 dy5 dy5 dy5  . " minmax(2em, auto)
+   "qu2 qu2 qu2 qu2 qu2 bod bod bod bod bod bod  .   .   .   .   . " minmax(2em, auto)
+   "qu2 qu2 qu2 qu2 qu2 bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(2em, auto)
+   " .   .   .   .   .  bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(2em, auto)
+   " .   .   .  dy2 dy2 bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(4em, auto)
+   " .  dy3 dy3 dy2 dy2 bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(4em, auto)
+   " .  dy3 dy3  .   .  bod bod bod bod bod bod dy6 dy6 dy6  .   . " minmax(2em, auto)
+   " .  dy3 dy3 dy4 dy4 bod bod bod bod bod bod  .   .   .   .   . " minmax(2em, auto)
+   " .  dy3 dy3 dy4 dy4 bod bod bod bod bod bod qu1 qu1 qu1 qu1  . " minmax(2em, auto)
+   " .   .   .  dy4 dy4 bod bod bod bod bod bod qu1 qu1 qu1 qu1  . " minmax(6em, auto)
+   " .   .   .  dy4 dy4 bod bod bod bod bod bod  .   .   .   .   . " minmax(2em, auto)
+   " .   .   .   .   .  bod bod bod bod bod bod  .   .   .   .   . " minmax(6em, auto)
+
+  }
 }

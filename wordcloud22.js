@@ -1261,7 +1261,7 @@ for (let i = 0; i < windowsize; i++) {
   list.push([eval('pronouns[Math.floor(Math.random() * pronouns.length)]'), x])
 }
 
-window.onload = WordCloud(document.getElementById('my_canvas'), 
+window.onload = WordCloud(document.getElementById('eup-canvas'), 
 { list: list,
   color: '#363636',
   fontweight: 'bold',
@@ -1271,7 +1271,7 @@ window.onload = WordCloud(document.getElementById('my_canvas'),
 });
 
 window.addEventListener('resize', function(event){
-  WordCloud(document.getElementById('my_canvas'), 
+  WordCloud(document.getElementById('eup-canvas'), 
 { list: list,
   color:'#363636',
   fontweight: 'bold',
@@ -1279,5 +1279,3 @@ window.addEventListener('resize', function(event){
   gridSize: '15',
   backgroundColor: 'black'
 })});
-
-
